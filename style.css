@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;    
+    background-color: #D0312D;
+    transition: background-color 0.5s;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 150vh;
+    margin: 0;
+  }
+  
+  .title {
+    font-size: 6rem;
+    color: #fff;
+    text-align: center;
+    transition: color 0.5s;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    transition: opacity 0.5s;
+  }
+  
+  .animal-btn {
+    background-color: #610C04;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .animal-btn:hover {
+    background-color: #fff;
+    color: #610C04;
+    transform: scale(1);
+    box-shadow: 0 0 10px #610C04;
+  }
+  
+  .content {
+    background-color: #e8d5d5;
+    color: #610C04;
+    padding: 2rem;
+    border-radius: 3px;
+    margin-top: 2rem;
+    width: 500px;
+    text-align: center;
+    transition: opacity 0.5s;
+  }
+  
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #quack-btn {
+    margin-top: 2rem;
+    background-color: #680C07;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.5s;
+  }
+  
+  #quack-btn:hover {
+    opacity: 0.5;
+  }
+  
+  .content p {
+    max-width: 900px;
+  }
+
+  #subscribe-btn {
+    background-color: #610C04;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+  }
+  
+  form button[type="submit"] {
+    background-color: #610C04;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.5s, box-shadow 0.5s;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form input[type="email"],
+  form button[type="submit"] {
+    margin: 10px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+  }
+  
+  
