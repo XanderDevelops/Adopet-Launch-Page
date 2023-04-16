@@ -81,23 +81,33 @@ document.addEventListener('DOMContentLoaded', function() {
         playSound('Audio/Meow.mp3');
         });
 
-    subscribeBtn.addEventListener('click', () => {
-    alert('Thank you for subscribing!');
+
+    
+    const subscribeForm = document.querySelector('#meow-content4 form');
+    subscribeBtn = document.querySelector('#subscribe-btn');
+
+    subscribeForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // prevent the form from submitting normally
+    sendEmail();
     });
 
-    // get the text element
-    const text = document.querySelector('.animate-text');
+    function sendEmail() {
+    const email = subscribeForm.querySelector('input[type="email"]').value;
 
-    // detect when the user scrolls
-    window.addEventListener('scroll', () => {
-    // get the position of the text element
-    const textPosition = text.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.3;
+    // TODO: Replace the placeholders below with your own email sending code
+    const subject = 'New subscriber';
+    const body = `Email: ${email}`;
 
-    // if the text is in the viewport, add the animation class
-    if (textPosition < screenPosition) {
-        text.classList.add('animate-text');
+    // Example using EmailJS (https://www.emailjs.com/)
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', { to_email: 'YOUR_EMAIL', subject: subject, body: body })
+        .then(() => {
+        alert('Thank you for subscribing!');
+        })
+        .catch((error) => {
+        console.error(error);
+        alert('Error sending email. Please try again later.');
+        });
     }
-    });
+
 
 });
