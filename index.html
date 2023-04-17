@@ -3,6 +3,7 @@
         <title>Adopet</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+        <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     </head>
 
     <body>
@@ -32,10 +33,6 @@
                         <button id="wouf-btn3" class="animal-btn">Wouf</button>
                     </div>
                 </div>
-                <form id="wouf-content4" class="content" style="display:none">
-                    <input type="email" placeholder="Ingresa tu correo electrónico" required>
-                    <button class="subscribe-btn" type="submit">Wouf Wouf</button>
-                </form> 
             </div>
 
             <!-- cats -->
@@ -60,11 +57,12 @@
                         <button id="meow-btn3" class="animal-btn">Meow</button>
                     </div>
                 </div>
-                <form id="meow-content4" class="content" style="display:none">
-                    <input type="email" placeholder="Ingresa tu correo electrónico" required>
-                    <button class="subscribe-btn" type="submit">Wouf Wouf</button>
-                </form>
             </div>
+
+            <form id="subscribe-form" class="content" style="display:none" action="https://formsubmit.co/alejandrodanieljm@gmail.com" method="POST">
+                <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                <button class="subscribe-btn" id="subscribe-btn" type="submit">Wouf Wouf</button>
+            </form>
         </div>
         
         <img class="prototipo" src="281shots_so.png" alt="Mockup de la aplicación">
