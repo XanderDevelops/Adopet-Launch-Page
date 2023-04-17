@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     woufBtn3.addEventListener('click', () => {
         woufContent3.style.display = 'none';  
-        subscribeform.style.display = 'block';  
+        subscribeform.style.display = 'block';
+        document.getElementById('subscribe-btn').textContent =  'wouf wouf';
         playSound('Audio/Bark.mp3');
         });
 
@@ -73,9 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
         meowContent3.style.display = 'block';  
         playSound('Audio/Meow.mp3');
         });
-        meowBtn3.addEventListener('click', () => {
+    meowBtn3.addEventListener('click', () => {
             meowContent3.style.display = 'none';  
-            subscribeform.style.display = 'block';  
+            subscribeform.style.display = 'block';
+            document.getElementById('subscribe-btn').textContent =  'meow meow'; 
             playSound('Audio/Meow.mp3');
         });
 });
